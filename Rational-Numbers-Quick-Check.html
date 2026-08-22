@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <title>Rational Numbers Quick Check</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="offline-launch-error" hidden role="alert" style="margin:48px auto;max-width:900px;padding:24px;border:2px solid #b42318;border-radius:12px;background:#fff1f0;color:#7a160d;font:600 18px/1.5 Segoe UI,Arial,sans-serif">
+      Offline startup error.
+    </div>
+    <script>
+      (() => {
+        const showOfflineError = message => {
+          const panel = document.querySelector('#offline-launch-error');
+          if (!panel) return;
+          panel.hidden = false;
+          panel.textContent = `Offline startup error: ${message}`;
+        };
+        window.addEventListener('error', event => showOfflineError(event.message || 'Unknown JavaScript error.'));
+        window.addEventListener('unhandledrejection', event => showOfflineError(event.reason?.message || String(event.reason || 'Unknown promise error.')));
+      })();
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
