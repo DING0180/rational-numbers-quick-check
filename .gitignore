@@ -1,0 +1,6 @@
+node_modules/
+dist/
+dist-single/
+课堂离线版/
+release-usb/
+.worktrees/
