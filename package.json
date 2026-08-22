@@ -1,0 +1,21 @@
+{
+  "name": "rational-numbers-quick-check",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:pages": "vite build --mode github-pages",
+    "build:offline": "vite build --config vite.single.config.js",
+    "build:usb": "node scripts/build-usb.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "katex": "^0.16.22"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
