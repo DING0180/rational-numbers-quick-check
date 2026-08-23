@@ -1,9 +1,5 @@
 const REQUIRED_TEXT_FIELDS = ['lessonId', 'difficulty', 'templateId', 'prompt', 'questionKatex', 'answerKatex', 'explanation', 'supportText', 'signature'];
 
-export function isFiniteInteger(value) {
-  return Number.isInteger(value) && Number.isFinite(value);
-}
-
 function valuesAreFinite(value) {
   if (typeof value === 'number') return Number.isFinite(value);
   if (Array.isArray(value)) return value.every(valuesAreFinite);
