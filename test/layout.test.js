@@ -11,6 +11,10 @@ test('short questions keep the large classroom size', () => {
   assert.equal(getQuestionSizeClass('(-7)+12=?'), 'question-short');
 });
 
+test('spaced sequence questions use a compact size class', () => {
+  assert.equal(getQuestionSizeClass('-2,\\quad4,\\quad-8,\\quad16,\\quad?'), 'question-long');
+});
+
 test('long questions use a compact size class', () => {
   assert.equal(getQuestionSizeClass('\\text{Rounds to }7.3\\text{ to the nearest tenth}'), 'question-long');
 });
