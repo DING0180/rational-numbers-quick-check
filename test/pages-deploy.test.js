@@ -22,5 +22,5 @@ test('GitHub Pages deployment uses the official Actions workflow and documents t
   assert.match(workflow, /actions\/upload-pages-artifact@v3/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
   assert.match(workflow, /npm run build:pages/);
-  assert.match(readme, /## Live Website/);
+  assert.match(readme, /https:\/\/ding0180\.github\.io\/rational-numbers-quick-check\//);
 });
